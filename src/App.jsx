@@ -7,6 +7,7 @@ import SummarySection from "./components/SummarySection";
 import ExperienceSection from "./components/ExperienceSection";
 import EducationSection from "./components/EducationSection";
 import AdditionalSection from "./components/AdditionalSection";
+import ThanksSection from "./components/ThanksSection";
 
 function App() {
   const [activeSection, setActiveSection] = useState("Welcome");
@@ -54,6 +55,9 @@ function App() {
         )}
         {activeSection === "additional" && (
           <AdditionalSection onClick={handleNavClick} />
+        )}
+        {activeSection === "Thanks" && (
+          <ThanksSection onClick={handleNavClick} />
         )}
       </main>
 

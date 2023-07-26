@@ -38,8 +38,8 @@ const AdditionalSection = ({ onClick }) => {
         </div>
       </div>
       <div className="next-button-container">
-        <button id="next-button" onClick={() => onClick("Welcome")}>
-          Volver
+        <button id="next-button" onClick={() => onClick("Thanks")}>
+          Siguiente
         </button>
       </div>
     </>

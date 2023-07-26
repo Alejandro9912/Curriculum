@@ -34,12 +34,12 @@ function EducationSection({ onClick }) {
             ))}
           </ul>
         </div>
-        <div className="next-button-container">
-        </div>
       </div>
+        <div className="next-button-container">
           <button id="next-button" onClick={() => onClick("additional")}>
             Siguiente
           </button>
+        </div>
     </>
   );
 }
