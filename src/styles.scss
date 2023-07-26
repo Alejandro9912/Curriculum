@@ -196,6 +196,9 @@ header > h1 > span {
   padding-left: 20px;
   color: $UI-UX-4-hex;   // Texto oscuro
 
+  @media screen and (max-width: 1024px) {
+    font-size: 10px;
+  }
   @media screen and (max-width: 768px) {
     font-size: 9px;
   }
@@ -249,6 +252,9 @@ a:hover {
   margin-bottom: 10px;
   color: $UI-UX-1-hex;   // Texto oscuro
 
+  @media screen and (max-width: 1024px) {
+    font-size: 10px;
+  }
   @media screen and (max-width: 768px) {
     font-size: 10px;
   }
