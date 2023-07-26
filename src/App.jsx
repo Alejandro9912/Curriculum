@@ -83,11 +83,11 @@ function App() {
               <a href={`mailto:juanalcarios@gmail.com`}>
                 <FaEnvelope />
               </a>{" "}
-              |
+              |{" "}
               <a href={t("linkedin")} target="_blank" rel="noopener noreferrer">
                 <FaLinkedin />
               </a>{" "}
-              |
+              |{" "}
               <a href={t("github")} target="_blank" rel="noopener noreferrer">
                 <FaGithub />
               </a>

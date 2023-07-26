@@ -17,6 +17,7 @@ const EducationSection = ({ onClick, isActive }) => {
               <br />
               {t("Education1Date")}
             </li>
+            <br />
             <li>
               <strong>{t("Education2Title")}</strong>
               <br />

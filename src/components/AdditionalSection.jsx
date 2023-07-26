@@ -35,20 +35,22 @@ const AdditionalSection = ({ onClick, isActive }) => {
           <h2 className="section-title">{t("AdditionalSectionTitle")}</h2>
           <ul>
             {additionalContent.map((item, index) => (
-              <li key={index}>
-                <strong>{item.title}</strong> {item.content}
-              </li>
+              <>
+                <li key={index}>
+                  <strong>{item.title}</strong> {item.content}
+                </li> <br />
+              </>
             ))}
           </ul>
         </div>
       </div>
-        {isActive && (
-          <div className="next-button-container">
-            <button id="next-button" onClick={() => onClick("Welcome")}>
-              {t("BackButtonLabel")}
-            </button>
-          </div>
-        )}
+      {isActive && (
+        <div className="next-button-container">
+          <button id="next-button" onClick={() => onClick("Welcome")}>
+            {t("BackButtonLabel")}
+          </button>
+        </div>
+      )}
     </>
   );
 };

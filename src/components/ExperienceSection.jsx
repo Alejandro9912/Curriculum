@@ -16,19 +16,21 @@ const ExperienceSection = ({ onClick, isActive }) => {
               <strong>{t("Experience1Subtitle")}</strong>
               <br />
               {t("Experience1Date")}
-              <br />
+              <br /> <br />
               <ul>
                 <li>{t("Experience1Point1")}</li>
                 <li>{t("Experience1Point2")}</li>
                 <li>{t("Experience1Point3")}</li>
               </ul>
             </li>
+            <br />
             <li>
               <strong>{t("Experience2Title")}</strong>
               <br />
               <strong>{t("Experience2Subtitle")}</strong>
               <br />
               {t("Experience2Date")}
+              <br />
               <br />
               <ul>
                 <li>{t("Experience2Point1")}</li>
@@ -39,13 +41,13 @@ const ExperienceSection = ({ onClick, isActive }) => {
           </ul>
         </div>
       </div>
-        {isActive && (
-          <div className="next-button-container">
-            <button id="next-button" onClick={() => onClick("education")}>
-              {t("NextButtonLabel")}
-            </button>
-          </div>
-        )}
+      {isActive && (
+        <div className="next-button-container">
+          <button id="next-button" onClick={() => onClick("education")}>
+            {t("NextButtonLabel")}
+          </button>
+        </div>
+      )}
     </>
   );
 };
