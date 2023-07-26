@@ -39,12 +39,12 @@ function App() {
           className={`section ${activeSection === "Welcome" ? "" : "hidden"}`}
         >
           <div className="section-content">
-            <h2 className="section-title">WELCOME!!</h2>
+            <h2 id="Welcome" className="section-title">WELCOME!!</h2>
           </div>
         </div>
         {activeSection === "Welcome" && (
           <div className="next-button-container">
-            <button onClick={() => handleNavClick("summary")}>Siguiente</button>
+            <button id="next-button" onClick={() => handleNavClick("summary")}>Siguiente</button>
           </div>
         )}
 

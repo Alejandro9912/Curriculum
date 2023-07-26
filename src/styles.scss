@@ -1,18 +1,23 @@
-// Variables
-$primary-color: #57b88a;
-$secondary-color: #1b365c;
+$UI-UX-1-hex: #6D3C1D;   // Marrón oscuro
+$UI-UX-2-hex: #AC9B8C;   // Beige suave
+$UI-UX-3-hex: #060A0D;   // Negro
+$UI-UX-4-hex: #72685B;   // Marrón claro
+$UI-UX-5-hex: #F2F2F2;   // Gris muy claro
 
 // Estilos generales
+$font-family-primary: "Roboto", "Helvetica Neue", Arial, sans-serif;
+$font-family-secondary: "Helvetica Neue", Arial, sans-serif;
+
 * {
   box-sizing: border-box;
 }
 
 body {
-  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-family: $font-family-primary, $font-family-secondary;
   margin: 0;
   padding: 0;
-  background-color: #223240;
-  color: $primary-color;
+  background-color: $UI-UX-3-hex;   // Fondo más claro
+  color: $UI-UX-5-hex;   // Texto más oscuro
   overflow: hidden;
   justify-content: center;
 }
@@ -33,12 +38,12 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 20px;
-  border-bottom: 1px solid $primary-color;
+  border-bottom: 1px solid $UI-UX-3-hex;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  background-color: #223240;
+  background-color: $UI-UX-5-hex;   // Fondo más claro
   z-index: 100;
 
   @media screen and (max-width: 768px) {
@@ -68,7 +73,7 @@ header > h1 > span {
   font-family: "Press Start 2P", cursive;
   font-size: 24px;
   font-weight: bold;
-  color: $primary-color;
+  color: $UI-UX-3-hex;   // Texto más oscuro
 
   @media screen and (max-width: 768px) {
     font-size: 20px;
@@ -83,10 +88,10 @@ header > h1 > span {
     display: block;
     font-family: "Press Start 2P", cursive;
     font-size: 16px;
-    color: $primary-color;
-    background-color: #223240;
+    color: $UI-UX-5-hex;   // Texto más oscuro
+    background-color: $UI-UX-3-hex;   // Fondo más claro
     border-radius: 5px;
-    border: 1px solid $primary-color;
+    border: 1px solid $UI-UX-5-hex;   // Borde más oscuro
     padding: 8px 16px;
     cursor: pointer;
   }
@@ -110,23 +115,24 @@ header > h1 > span {
 .header-links a {
   font-family: "Press Start 2P", cursive;
   font-size: 16px;
-  color: $primary-color;
+  color: $UI-UX-5-hex;   // Texto más oscuro
   text-decoration: none;
   padding: 8px 16px;
-  background-color: #223240;
+  background-color: $UI-UX-3-hex;   // Fondo más claro
   border-radius: 5px;
-  border: 1px solid $primary-color;
+  border: 1px solid $UI-UX-5-hex;   // Borde más oscuro
   transition: background-color 0.3s, color 0.3s;
 }
 
 .header-links a:hover {
-  background-color: $primary-color;
-  color: #223240;
+  background-color: $UI-UX-5-hex;   // Fondo más oscuro
+  color: $UI-UX-3-hex;   // Texto más claro
 }
 
 .section {
   padding: 20px;
-  background-color: $primary-color;
+  background-color: $UI-UX-5-hex;   // Fondo más oscuro
+  color: $UI-UX-3-hex;   // Texto más claro
   border-radius: 5px;
   margin-bottom: 20px;
   scroll-margin-top: 60px;
@@ -161,8 +167,8 @@ header > h1 > span {
 .section-title {
   margin-bottom: 10px;
   font-weight: bold;
-  color: #ffffff;
-  font-family: "Helvetica Neue", Arial, sans-serif;
+  color: $UI-UX-1-hex;   // Texto más claro
+  font-family: $font-family-primary;   // Fuente Roboto
   text-transform: uppercase;
   letter-spacing: 2px;
 
@@ -174,7 +180,7 @@ header > h1 > span {
 .section-content ul {
   margin: 0;
   padding-left: 20px;
-  color: $secondary-color;
+  color: $UI-UX-4-hex;   // Texto oscuro
 
   @media screen and (max-width: 768px) {
     font-size: 12px;
@@ -185,7 +191,7 @@ header > h1 > span {
 }
 
 a {
-  color: $primary-color;
+  color: $UI-UX-3-hex;   // Texto más oscuro
 }
 
 a:hover {
@@ -208,16 +214,18 @@ a:hover {
 }
 
 .section h2 {
+  background-image: linear-gradient(to right, $UI-UX-1-hex, $UI-UX-5-hex);
+  border-radius: 80%;
   text-align: center;
   font-size: 24px;
   margin-bottom: 20px;
-  color: $secondary-color;
+  color: $UI-UX-1-hex;   // Texto oscuro
 }
 
 .section p {
   font-size: 16px;
   margin-bottom: 10px;
-  color: $secondary-color;
+  color: $UI-UX-1-hex;   // Texto oscuro
 
   @media screen and (max-width: 768px) {
     font-size: 12px;
@@ -228,7 +236,7 @@ a:hover {
 }
 
 strong {
-  color: $secondary-color;
+  color: $UI-UX-4-hex;   // Texto oscuro
 }
 
 main {
@@ -244,7 +252,7 @@ footer {
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: #223240;
+  background-color: $UI-UX-5-hex;   // Fondo más claro
   padding: 10px 20px;
   height: 100px;
 
@@ -257,6 +265,7 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: $UI-UX-2-hex;   // Texto claro
 
   @media screen and (max-width: 768px) {
     text-align: center;
@@ -285,7 +294,7 @@ footer {
   position: relative;
   margin: 0 auto;
   border: 4px solid #fff;
-  border-top: 4px solid $primary-color;
+  border-top: 4px solid $UI-UX-3-hex;   // Borde más oscuro
   border-radius: 50%;
   animation: spin 1s infinite linear;
 }
@@ -318,11 +327,37 @@ footer {
   height: 50px;
   border-radius: 50%;
   border: 6px solid #ccc;
-  border-top-color: #333;
+  border-top-color: $UI-UX-4-hex;   // Borde oscuro
   animation: spin 1s linear infinite;
 }
 
-#Welcome h2 {
+#Welcome {
   font-family: "Press Start 2P";
   font-size: 60px;
+}
+
+#next-button {
+  font-family: "Press Start 2P";
+  font-size: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  #Welcome {
+    font-size: 40px;
+  }
+
+  #next-button {
+    font-size: 16px;
+  }
+}
+
+// Estilos para móvil
+@media screen and (max-width: 480px) {
+  #Welcome {
+    font-size: 30px;
+  }
+
+  #next-button {
+    font-size: 14px;
+  }
 }
