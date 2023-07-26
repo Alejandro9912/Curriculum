@@ -1,47 +1,54 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
-const AdditionalSection = ({ onClick }) => {
+const AdditionalSection = ({ onClick, isActive }) => {
+  const { t } = useTranslation();
+
   // Contenido de la sección adicional
   const additionalContent = [
     {
-      title: "Skills",
-      content:
-        "Teamwork, Problem Solving, Collaboration, Responsibility, Creativity",
+      title: t("Additional1Title"),
+      content: t("Additional1Content"),
     },
     {
-      title: "Web Development",
-      content: "JavaScript, HTML/CSS, Node.js, React.js",
+      title: t("Additional2Title"),
+      content: t("Additional2Content"),
     },
     {
-      title: "Programming Languages",
-      content: "MATLAB, Python, SQL, PHP, Java",
+      title: t("Additional3Title"),
+      content: t("Additional3Content"),
     },
-    { title: "Languages", content: "Spanish, English-B1" },
     {
-      title: "Certifications & Training",
-      content: "Security Awareness Training, KITE - B1 English",
+      title: t("Additional4Title"),
+      content: t("Additional4Content"),
+    },
+    {
+      title: t("Additional5Title"),
+      content: t("Additional5Content"),
     },
   ];
 
   return (
     <>
-      <div className="section" id="additional">
+      <div className={`section ${isActive ? "" : "hidden"}`} id="additional">
         <div className="section-content">
-          <h2 className="section-title">ADDITIONAL</h2>
+          <h2 className="section-title">{t("AdditionalSectionTitle")}</h2>
           <ul>
             {additionalContent.map((item, index) => (
               <li key={index}>
-                <strong>{item.title}:</strong> {item.content}
+                <strong>{item.title}</strong> {item.content}
               </li>
             ))}
           </ul>
         </div>
       </div>
-      <div className="next-button-container">
-        <button id="next-button" onClick={() => onClick("Thanks")}>
-          Siguiente
-        </button>
-      </div>
+        {isActive && (
+          <div className="next-button-container">
+            <button id="next-button" onClick={() => onClick("Welcome")}>
+              {t("BackButtonLabel")}
+            </button>
+          </div>
+        )}
     </>
   );
 };

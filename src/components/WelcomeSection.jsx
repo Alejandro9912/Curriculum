@@ -1,21 +1,27 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
-function WelcomeSection({ onClick }) {
+const WelcomeSection = ({ onClick, isActive }) => {
+  const { t } = useTranslation();
+
   return (
     <>
-      <div className="section">
+      <div className={`section ${isActive ? "" : "hidden"}`}>
         <div className="section-content">
-          <h2 id="Welcome" className="section-title">
-            WELCOME!!
+          <h2 className="section-title" id="Welcome">
+            {t("WelcomeTitle")}
           </h2>
         </div>
-        <div className="next-button-container"></div>
       </div>
-        <button id="next-button" onClick={() => onClick("summary")}>
-          Siguiente
-        </button>
+        {isActive && (
+          <div className="next-button-container">
+            <button id="next-button" onClick={() => onClick("summary")}>
+              {t("NextButtonLabel")}
+            </button>
+          </div>
+        )}
     </>
   );
-}
+};
 
 export default WelcomeSection;

@@ -1,47 +1,41 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
-function EducationSection({ onClick }) {
-  // Contenido de la sección de educación
-  const educationContent = [
-    {
-      institution:
-        "Universidad Distrital Francisco Jose de Caldas | Bogotá, Colombia",
-      degree: "Systems Engineer",
-      date: "Feb 2017 - Feb 2023",
-    },
-    {
-      institution:
-        "Escuela Tecnológica Instituto Técnico Central de La Salle | Bogotá, Colombia",
-      degree: "Technical bachelor in industrial processes",
-      date: "Feb 2011 - Dec 2016",
-    },
-  ];
+const EducationSection = ({ onClick, isActive }) => {
+  const { t } = useTranslation();
 
   return (
     <>
-      <div className="section" id="education">
+      <div className={`section ${isActive ? "" : "hidden"}`} id="education">
         <div className="section-content">
-          <h2 className="section-title">EDUCATION</h2>
+          <h2 className="section-title">{t("EducationSectionTitle")}</h2>
           <ul>
-            {educationContent.map((item, index) => (
-              <li key={index}>
-                <strong>{item.institution}</strong>
-                <br />
-                {item.degree}
-                <br />
-                {item.date}
-              </li>
-            ))}
+            <li>
+              <strong>{t("Education1Title")}</strong>
+              <br />
+              {t("Education1Subtitle")}
+              <br />
+              {t("Education1Date")}
+            </li>
+            <li>
+              <strong>{t("Education2Title")}</strong>
+              <br />
+              {t("Education2Subtitle")}
+              <br />
+              {t("Education2Date")}
+            </li>
           </ul>
         </div>
       </div>
-        <div className="next-button-container">
-          <button id="next-button" onClick={() => onClick("additional")}>
-            Siguiente
-          </button>
-        </div>
+        {isActive && (
+          <div className="next-button-container">
+            <button id="next-button" onClick={() => onClick("additional")}>
+              {t("NextButtonLabel")}
+            </button>
+          </div>
+        )}
     </>
   );
-}
+};
 
 export default EducationSection;
