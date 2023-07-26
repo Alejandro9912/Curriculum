@@ -39,12 +39,16 @@ function App() {
           className={`section ${activeSection === "Welcome" ? "" : "hidden"}`}
         >
           <div className="section-content">
-            <h2 id="Welcome" className="section-title">WELCOME!!</h2>
+            <h2 id="Welcome" className="section-title">
+              WELCOME!!
+            </h2>
           </div>
         </div>
         {activeSection === "Welcome" && (
           <div className="next-button-container">
-            <button id="next-button" onClick={() => handleNavClick("summary")}>Siguiente</button>
+            <button id="next-button" onClick={() => handleNavClick("summary")}>
+              Siguiente
+            </button>
           </div>
         )}
 
@@ -71,6 +75,16 @@ function App() {
             </p>
           </div>
         </div>
+        {activeSection === "summary" && (
+          <div className="next-button-container">
+            <button
+              id="next-button"
+              onClick={() => handleNavClick("experience")}
+            >
+              Siguiente
+            </button>
+          </div>
+        )}
 
         {/* Sección de experiencia */}
         <div
@@ -139,7 +153,16 @@ function App() {
             </ul>
           </div>
         </div>
-
+        {activeSection === "experience" && (
+          <div className="next-button-container">
+            <button
+              id="next-button"
+              onClick={() => handleNavClick("education")}
+            >
+              Siguiente
+            </button>
+          </div>
+        )}
         {/* Sección de educación */}
         <div
           className={`section ${activeSection === "education" ? "" : "hidden"}`}
@@ -171,7 +194,16 @@ function App() {
             </ul>
           </div>
         </div>
-
+        {activeSection === "education" && (
+          <div className="next-button-container">
+            <button
+              id="next-button"
+              onClick={() => handleNavClick("additional")}
+            >
+              Siguiente
+            </button>
+          </div>
+        )}
         {/* Sección adicional */}
         <div
           className={`section ${
@@ -204,6 +236,13 @@ function App() {
             </ul>
           </div>
         </div>
+        {activeSection === "additional" && (
+          <div className="next-button-container">
+            <button id="next-button" onClick={() => handleNavClick("Welcome")}>
+              Volver
+            </button>
+          </div>
+        )}
       </main>
 
       <footer>
